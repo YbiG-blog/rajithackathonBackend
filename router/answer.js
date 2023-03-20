@@ -52,7 +52,7 @@ router.put("/seeanswer", async (req, res) => {
 
     const AnswerData = await Answer.find({ userId: userId }).populate(
       "userId",
-      "name studentNum branch score loginAt"
+      "name studentNum section score loginAt"
     );
     res.status(201).send(AnswerData);
   } catch (err) {

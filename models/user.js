@@ -12,13 +12,13 @@ const UserSchema = new Schema(
       unique: true,
       maxLength: [8, "max length is 8"],
     },
-    rollNum: {
-      type: Number,
-      required: true,
-      unique: true,
-      minLength: [13, "min length is 13"],
-      maxLength: [13, "max length is 13"],
-    },
+    // rollNum: {
+    //   type: Number,
+    //   required: true,
+    //   unique: true,
+    //   minLength: [13, "min length is 13"],
+    //   maxLength: [13, "max length is 13"],
+    // },
     mobileNum: {
       type: Number,
       required: true,
@@ -27,17 +27,17 @@ const UserSchema = new Schema(
       unique: true,
     },
     password: { type: String },
-    year: {
-      type: Number,
-      required: true,
-      min: 1,
-      max: 4,
-    },
-    branch: {
+    // year: {
+    //   type: Number,
+    //   required: true,
+    //   min: 1,
+    //   max: 4,
+    // },
+    section: {
       type: String,
       required: true,
     },
-    domain: {
+    subject: {
       type: String,
       required: true,
     },
@@ -45,11 +45,11 @@ const UserSchema = new Schema(
       type: String,
       required: true,
     },
-    isHosteler: {
-      type: Boolean,
-      default: false,
-      required: true,
-    },
+    // isHosteler: {
+    //   type: Boolean,
+    //   default: false,
+    //   required: true,
+    // },
     hasAppeared: {
       type: Boolean,
       default: false,

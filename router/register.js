@@ -10,16 +10,13 @@ router.post("/register", async (req, res) => {
       name,
       email,
       studentNum,
-      rollNum,
       mobileNum,
-      year,
-      branch,
+      section,
       gender,
-      domain,
-      isHosteler,
+      subject
     } = req.body;
     const userExist = await User.findOne({
-      $or: [{ rollNum }, { mobileNum }, { email }, { studentNum }],
+      $or: [ { mobileNum }, { email }, { studentNum }],
     });
 
     if (userExist) {
@@ -30,14 +27,11 @@ router.post("/register", async (req, res) => {
       name,
       email,
       studentNum,
-      rollNum,
       mobileNum,
       password: `${process.env.USERPASSWORD}@${studentNum}`,
-      year,
-      branch,
+      section,
       gender,
-      domain,
-      isHosteler,
+      subject,
     });
 
     // bcrypt password
